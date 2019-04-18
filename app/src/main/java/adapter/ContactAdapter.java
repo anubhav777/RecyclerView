@@ -1,5 +1,6 @@
 package adapter;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -8,9 +9,21 @@ import android.widget.TextView;
 
 import com.e.recyclerview.R;
 
+import java.util.List;
+
 import de.hdodenhof.circleimageview.CircleImageView;
+import model.Contacts;
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactsViewHolder> {
+
+    Context mContext;
+    List<Contacts> contactsList;
+
+    public ContactAdapter(Context mContext, List<Contacts>contactsList){
+        this.mContext= mContext;
+        this.contactsList = contactsList;
+    }
+
     @NonNull
     @Override
     public ContactsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -40,4 +53,4 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
     }
 }
 
-//arko activity ko reference lyauna
+//arko activity ko reference lyauna: context
