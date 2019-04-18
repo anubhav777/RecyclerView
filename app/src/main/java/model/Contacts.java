@@ -5,6 +5,12 @@ public class Contacts {
     private String phoneNo;
     private int imageId;
 
+    public Contacts(String name, String phoneNo, int imageId) {
+        this.name = name;
+        this.phoneNo = phoneNo;
+        this.imageId = imageId;
+    }
+
     public String getName() {
         return name;
     }
